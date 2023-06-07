@@ -1,5 +1,5 @@
 # APIrestful_chuck
-Prueba técnica de Taier DDB
+Prueba técnica de DDB
 
 
 La API tiene 3 rutas:
