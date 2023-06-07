@@ -7,10 +7,10 @@ cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 @app.route("/")
 def inicio():
-    return "<h1>Página inicial</h1>"
+    return "<h1>Bienvenido: Página inicial</h1>"
 
 @app.route("/objetos")
-@cache.cached(timeout=90)
+@cache.cached(timeout=120)
 def objetos():
 
     url = "https://api.chucknorris.io/jokes/random"
@@ -29,7 +29,7 @@ def objetos():
     return jsonify({"Objetos":objetos})
 
 @app.route("/jokes")
-@cache.cached(timeout=90)
+@cache.cached(timeout=120)
 def jokes():
 
     bromas = list()
